@@ -14,6 +14,10 @@ public class GlobalExceptionController {
     @ResponseBody
     public String handleBaseException(MemberException e) {
         System.out.println(e.getErrorCode());
+        System.out.println(e.getMessage());
+        /*
+            여기서 원하는 형태로 response 하면 됩니다!!!!
+         */
         return e.getErrorCode();
     }
 
