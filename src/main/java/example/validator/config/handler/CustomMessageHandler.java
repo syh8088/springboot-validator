@@ -18,5 +18,4 @@ public class CustomMessageHandler {
     public static String getMessage(String code) {
         return staticMessageSource.getMessage(code, null, LocaleContextHolder.getLocale());
     }
-
 }

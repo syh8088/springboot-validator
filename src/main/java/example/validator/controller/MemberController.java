@@ -2,7 +2,7 @@ package example.validator.controller;
 
 import example.validator.model.MemberRequest;
 import example.validator.service.MemberService;
-import example.validator.util.Validator;
+import example.validator.util.MemberValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     private final MemberService memberService;
-    private final Validator validator;
+    private final MemberValidator memberValidator;
+
+    @PostMapping("origin")
+    public ResponseEntity<?> originSaveMember(@RequestBody MemberRequest memberRequest) {
+
+
+        return ResponseEntity.ok().body(memberService.originSaveMember(memberRequest));
+    }
+
 
     @PostMapping
     public ResponseEntity<?> saveMember(@RequestBody MemberRequest memberRequest) {

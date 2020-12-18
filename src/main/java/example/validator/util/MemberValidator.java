@@ -6,7 +6,7 @@ import example.validator.model.MemberRequest;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Validator {
+public class MemberValidator {
 
 
     public void saveMember(MemberRequest memberRequest) {
