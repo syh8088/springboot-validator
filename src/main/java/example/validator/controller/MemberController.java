@@ -21,7 +21,7 @@ public class MemberController {
     @PostMapping("origin")
     public ResponseEntity<?> originSaveMember(@RequestBody MemberRequest memberRequest) {
 
-
+        // validator.saveMember(memberRequest);
         return ResponseEntity.ok().body(memberService.originSaveMember(memberRequest));
     }
 

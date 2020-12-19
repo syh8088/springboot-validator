@@ -1,6 +1,5 @@
 package example.validator.common;
 
-import example.validator.error.errorCode.ErrorCode;
 import lombok.Builder;
 import lombok.Data;
 
