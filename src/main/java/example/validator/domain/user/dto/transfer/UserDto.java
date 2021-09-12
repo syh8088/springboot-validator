@@ -1,6 +1,5 @@
 package example.validator.domain.user.dto.transfer;
 
-import example.validator.domain.user.dto.response.UserResponseDto;
 import lombok.*;
 
 import javax.persistence.Entity;

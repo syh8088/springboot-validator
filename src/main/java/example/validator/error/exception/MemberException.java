@@ -16,6 +16,12 @@ public class MemberException extends RuntimeException {
         this.message = CustomMessageHandler.getMessage(errorCode.getCode());
     }
 
+    public MemberException(ErrorCode errorCode, Object[] errorMessages) {
+        super(errorCode.getCode());
+        this.errorCode = errorCode;
+        this.message = CustomMessageHandler.getMessage(errorCode.getCode(), errorMessages);
+    }
+
     @Override
     public String getMessage() {
         return message;

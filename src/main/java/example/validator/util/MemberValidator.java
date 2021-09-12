@@ -8,12 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class MemberValidator {
 
-
     public void saveMember(MemberRequest memberRequest) {
 
         if (memberRequest.getPassword().length() < 10) {
-            throw new MemberException(MemberErrorCode.NOT_VALID_PASSWORD_LENGTH);
+            throw new MemberException(MemberErrorCode.NOT_VALID_PASSWORD_LENGTH, new Object[] { 4, 10 });
         }
     }
-
 }
